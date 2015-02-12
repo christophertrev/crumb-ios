@@ -17,28 +17,27 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
+        
+        var text = Crumb(lat: 1, long: 1, texts: "helloooo", dropID: 1, pickupRadi: 1)
+        text.print()
        
         super.viewDidLoad()
-//         println("magic?")
-        // Do any additional setup after loading the view, typically from a nib.
+
         locationManager.requestWhenInUseAuthorization();
-//        CLLocationManager.requestAlwaysAuthorizat
         if CLLocationManager.locationServicesEnabled(){
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
-            
         }
         else{
             println("Location service disabled");
         }
-        
-        
-        
+        //want to add many points to map
+        var equivalentEmptyDictionary = [String: Int]()
+
         
         let sfGiantsStadiumLocation = CLLocationCoordinate2D(latitude: 37.783748, longitude: -122.409046)
         addPointToMap(sfGiantsStadiumLocation, title:"gitants", subTitle:"weeSubtitles")
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,8 +61,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     func addPointToMap(coordinates: CLLocationCoordinate2D, title: NSString, subTitle: NSString ){
         var point = MKPointAnnotation()
         point.setCoordinate(coordinates)
-        point.title = title
-        point.subtitle = subTitle
+//        point.title = title
+//        point.subtitle = subTitle
         
         mainMap.addAnnotation(point)
         

@@ -15,6 +15,7 @@
 		489DB3391A8C2E6B006E5405 /* crumbs_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489DB3381A8C2E6B006E5405 /* crumbs_iosTests.swift */; };
 		489DB3431A8C3255006E5405 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489DB3421A8C3255006E5405 /* MapKit.framework */; };
 		489DB3451A8C3578006E5405 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489DB3441A8C3578006E5405 /* CoreLocation.framework */; };
+		489DB3471A8C7012006E5405 /* crumbClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489DB3461A8C7012006E5405 /* crumbClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		489DB3381A8C2E6B006E5405 /* crumbs_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crumbs_iosTests.swift; sourceTree = "<group>"; };
 		489DB3421A8C3255006E5405 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		489DB3441A8C3578006E5405 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		489DB3461A8C7012006E5405 /* crumbClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = crumbClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				489DB3201A8C2E6B006E5405 /* AppDelegate.swift */,
 				489DB3241A8C2E6B006E5405 /* MapViewController.swift */,
+				489DB3461A8C7012006E5405 /* crumbClass.swift */,
 				489DB3261A8C2E6B006E5405 /* Main.storyboard */,
 				489DB3291A8C2E6B006E5405 /* Images.xcassets */,
 				489DB32B1A8C2E6B006E5405 /* LaunchScreen.xib */,
@@ -222,6 +225,7 @@
 			files = (
 				489DB3251A8C2E6B006E5405 /* MapViewController.swift in Sources */,
 				489DB3211A8C2E6B006E5405 /* AppDelegate.swift in Sources */,
+				489DB3471A8C7012006E5405 /* crumbClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

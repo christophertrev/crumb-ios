@@ -32,6 +32,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         else{
             println("Location service disabled");
         }
+        
+        
+        
+        
+        let sfGiantsStadiumLocation = CLLocationCoordinate2D(latitude: 37.783748, longitude: -122.409046)
+        addPointToMap(sfGiantsStadiumLocation, title:"gitants", subTitle:"weeSubtitles")
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,12 +53,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         //        let sfGiantsStadiumLocation = CLLocationCoordinate2D(latitude: 37.783748, longitude: -122.409046)
         //set a span to be used by the MKCoordinateRegion structure
         let currentLocation = CLLocationCoordinate2D(latitude: locValue.latitude, longitude: locValue.longitude)
-        var span = MKCoordinateSpanMake(0.01, 0.01)
+        var span = MKCoordinateSpanMake(0.001, 0.001)
         var coordinateRegion = MKCoordinateRegion(center: currentLocation, span: span)
         
         mainMap.setRegion(coordinateRegion, animated: true)
     }
 
+    func addPointToMap(coordinates: CLLocationCoordinate2D, title: NSString, subTitle: NSString ){
+        var point = MKPointAnnotation()
+        point.setCoordinate(coordinates)
+        point.title = title
+        point.subtitle = subTitle
+        
+        mainMap.addAnnotation(point)
+        
+    }
 
     @IBAction func clickAddCrumb(sender: AnyObject) {
         println("clicke")
